@@ -10,11 +10,23 @@ function Item(props: sideBarItemProps) {
 	const name = "menu_item";
 
 	function handleClick(e: any) {
+		if (e.type === "keydown" && e.key !== "Enter") {
+			return;
+		}
 		dispatch(setSideBar(props.id));
 		navigate(props.to, { replace: true });
 	}
 	return (
-		<div data-to={props.to} onClick={handleClick} className="side_bar_item">
+		<div
+			data-to={props.to}
+			role="button"
+			aria-pressed="false"
+			tabIndex={0}
+			key={props.id}
+			onKeyDown={handleClick}
+			onClick={handleClick}
+			className="side_bar_item"
+		>
 			<div
 				data-selected={props.selected ? true : false}
 				className="side_bar_item_left"

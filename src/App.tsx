@@ -2,6 +2,7 @@ import {
 	JSXElementConstructor,
 	ReactElement,
 	ReactFragment,
+	useEffect,
 	useState,
 } from "react";
 
@@ -14,7 +15,11 @@ import { appProps, menu } from "./util/global";
 function App(props: appProps) {
 	const sideBar = useSelector((state: any) => state.sideBar as SideBarState);
 	const dispatch = useDispatch();
-	
+
+	useEffect(() => {
+		dispatch(setSideBar(props.id));
+	}, []);
+
 	function Menu() {
 		return (
 			<>
