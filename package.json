@@ -3,10 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://surya-teja-222.github.io/frontend-mentor-multi-step-form/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
@@ -19,6 +22,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "gh-pages": "^5.0.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
   }
