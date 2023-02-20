@@ -35,5 +35,6 @@ export type sideBarItemProps = {
 };
 
 export type appProps = {
-	id: number;
+	id?: number;
+	error?: boolean;
 };

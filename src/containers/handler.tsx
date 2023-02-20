@@ -1,9 +1,11 @@
+import React, { Suspense } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { SideBarState } from "../state/sideBarReducer";
-import FormContent1 from "./formContent1";
-import FormContent2 from "./formContent2";
-import FormContent3 from "./formContent3";
-import FormContent4 from "./formContent4";
+
+const FormContent1 = React.lazy(() => import("./formContent1"));
+const FormContent2 = React.lazy(() => import("./formContent2"));
+const FormContent3 = React.lazy(() => import("./formContent3"));
+const FormContent4 = React.lazy(() => import("./formContent4"));
 
 function Handler() {
 	const sideBar = useSelector((state: any) => state.sideBar as SideBarState);
@@ -11,15 +13,35 @@ function Handler() {
 
 	switch (sideBar.selected) {
 		case 1:
-			return <FormContent1 />;
+			return (
+				<Suspense fallback={<h1>Loading...</h1>}>
+					<FormContent1 />
+				</Suspense>
+			);
 		case 2:
-			return <FormContent2 />;
+			return (
+				<Suspense fallback={<h1>Loading...</h1>}>
+					<FormContent2 />
+				</Suspense>
+			);
 		case 3:
-			return <FormContent3 />;
+			return (
+				<Suspense fallback={<h1>Loading...</h1>}>
+					<FormContent3 />
+				</Suspense>
+			);
 		case 4:
-			return <FormContent4 />;
+			return (
+				<Suspense fallback={<h1>Loading...</h1>}>
+					<FormContent4 />
+				</Suspense>
+			);
 		default:
-			return <FormContent1 />;
+			return (
+				<Suspense fallback={<h1>Loading...</h1>}>
+					<FormContent1 />
+				</Suspense>
+			);
 	}
 }
 

@@ -9,6 +9,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import Item from "./components/sideBarItem";
 import Handler from "./containers/handler";
+import Error from "./error";
 import { setSideBar, SideBarState } from "./state/sideBarReducer";
 import { appProps, menu } from "./util/global";
 
@@ -17,7 +18,7 @@ function App(props: appProps) {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(setSideBar(props.id));
+		if (props.id) dispatch(setSideBar(props.id));
 	}, []);
 
 	function Menu() {
@@ -46,7 +47,7 @@ function App(props: appProps) {
 					<Menu />
 				</div>
 				<div className="right">
-					<Handler />
+					{props.error ? <Error /> : <Handler />}
 				</div>
 			</div>
 		</div>
