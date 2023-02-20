@@ -47,6 +47,9 @@ html {
 	--plan-btn-height: 10rem;
 	--plan-btn-width: 8.5rem;
 	--plan-item-img: 2.625rem;
+
+	/* Addons */
+	--addon-height: 5rem;
 }
 
 html {
@@ -258,7 +261,7 @@ p {
 }
 
 .plan_component_parent {
-	margin-top: var(--form-head-body-gap);
+	/* margin-top: var(--form-head-body-gap); */
 	display: flex;
 	gap: 1rem;
 }
@@ -444,4 +447,68 @@ input:checked + .slider:before {
 
 .go_back:focus {
 	outline: 2px solid var(--primary-purplish-blue);
+}
+
+.addon {
+	height: var(--addon-height);
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid var(--neutral-light-gray);
+	border-radius: 0.5rem;
+	align-items: center;
+	padding: var(--padding-normal);
+	transition: all 0.4s ease-in-out;
+	cursor: pointer;
+}
+
+.addon_1 {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.width-fill {
+	width: -webkit-fill-available;
+}
+
+.addon_name {
+	font-family: var(--font-family-medium);
+	font-weight: var(--weight-medium);
+	font-size: var(--body-size);
+	color: var(--primary-marine-blue);
+	text-transform: capitalize;
+}
+
+.addon_price {
+	color: var(--primary-purplish-blue);
+}
+
+.addon_desc {
+	font-family: var(--font-family-regular);
+	font-weight: var(--weight-regular);
+	font-size: var(--body-size);
+	color: var(--neutral-cool-gray);
+}
+
+.addon:hover,
+.addon:focus {
+	background-color: var(--neutral-alabaster);
+}
+
+.addon:focus {
+	outline: 1px solid var(--primary-purplish-blue);
+}
+
+.addon[data-selected="true"] {
+	background-color: var(--neutral-magnolia);
+	border: 2px solid var(--primary-purplish-blue);
+	/* outline: 2px solid var(--primary-purplish-blue); */
+}
+
+/* .addon_checkbox is a checkbox, make the default checkbox invisible and create a new bigger checkbox */
+.addon_checkbox {
+	height: 20px;
+	width: 20px;
+
+	accent-color: var(--primary-purplish-blue);
 }

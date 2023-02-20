@@ -5,6 +5,14 @@ export interface plansState {
 	priceYearly: number;
 }
 
+export interface addonsState {
+	id: number;
+	name: string;
+	description: string;
+	priceMonthly: number;
+	priceYearly: number;
+}
+
 export const plans: plansState[] = [
 	{
 		logo: "/assets/images/icon-arcade.svg",
@@ -23,6 +31,30 @@ export const plans: plansState[] = [
 		name: "pro",
 		priceMonthly: 15,
 		priceYearly: 150,
+	},
+];
+
+export const addons: addonsState[] = [
+	{
+		id: 1,
+		name: "Online service",
+		description: "Access to multiplayer games",
+		priceMonthly: 1,
+		priceYearly: 10,
+	},
+	{
+		id: 2,
+		name: "Larger storage",
+		description: "Extra 1TB of cloud save",
+		priceMonthly: 2,
+		priceYearly: 20,
+	},
+	{
+		id: 3,
+		name: "Customizable profile",
+		description: "Custom theme on your profile",
+		priceMonthly: 2,
+		priceYearly: 20,
 	},
 ];
 
