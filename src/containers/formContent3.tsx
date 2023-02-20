@@ -1,10 +1,13 @@
-
-
 function formContent3() {
 	return (
-		<div>
-			<h1>Form Content 3</h1>
-			<p>Form Content 3</p>
+		<div className="form_2">
+			<div className="">
+				<h1 className="form__head">Pick add-ons</h1>
+				<p className="form__p">
+					Add-ons help enhance your gaming experience.
+				</p>
+			</div>
+			
 		</div>
 	);
 }

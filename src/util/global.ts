@@ -1,8 +1,30 @@
-export type menuType = {
-	id: number;
-	value: string;
-	to: string;
-}[];
+export interface plansState {
+	logo: string;
+	name: string;
+	priceMonthly: number;
+	priceYearly: number;
+}
+
+export const plans: plansState[] = [
+	{
+		logo: "/assets/images/icon-arcade.svg",
+		name: "arcade",
+		priceMonthly: 9,
+		priceYearly: 90,
+	},
+	{
+		logo: "/assets/images/icon-advanced.svg",
+		name: "advanced",
+		priceMonthly: 12,
+		priceYearly: 120,
+	},
+	{
+		logo: "/assets/images/icon-pro.svg",
+		name: "pro",
+		priceMonthly: 15,
+		priceYearly: 150,
+	},
+];
 
 export const menu: menuType = [
 	{
@@ -26,6 +48,12 @@ export const menu: menuType = [
 		to: "/summary",
 	},
 ];
+
+export type menuType = {
+	id: number;
+	value: string;
+	to: string;
+}[];
 
 export type sideBarItemProps = {
 	id: number;

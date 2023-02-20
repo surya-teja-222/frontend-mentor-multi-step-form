@@ -50,10 +50,12 @@ function formContent1() {
 	}
 	return (
 		<div>
-			<h1 className="form__head">Personal Info</h1>
-			<p className="form__p">
-				Please provide your name, email address, and phone number.
-			</p>
+			<div className="">
+				<h1 className="form__head">Personal Info</h1>
+				<p className="form__p">
+					Please provide your name, email address, and phone number.
+				</p>
+			</div>
 			<form className="form" onSubmit={handleSubmit}>
 				<div className="form_item">
 					<div className="label_container">
