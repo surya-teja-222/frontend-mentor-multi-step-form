@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { PersonalInfoState } from "../state/personalInfoReducer";
 import { SideBarState, setSideBar } from "../state/sideBarReducer";
 import { userPlanState } from "../state/userPlanReducer";
 import { addonsState } from "../util/global";
@@ -8,6 +9,9 @@ function formContent4() {
 	const sideBar = useSelector((state: any) => state.sideBar as SideBarState);
 	const planInfo = useSelector(
 		(state: any) => state.planInfo as userPlanState
+	);
+	const personalInfo = useSelector(
+		(state: any) => state.personalInfo as PersonalInfoState
 	);
 	const selectedAddons = useSelector(
 		(state: any) => state.addons as addonsState[]
@@ -30,6 +34,18 @@ function formContent4() {
 
 	function handleSubmit(e: any) {
 		e.preventDefault();
+
+		// if all the fields are filled
+		if (
+			personalInfo.name != "" &&
+			personalInfo.email != "" &&
+			personalInfo.phone != "" &&
+			planInfo.name != ""
+		) {
+			navigate("/thankyou", { replace: true });
+			dispatch(setSideBar(sideBar.selected + 1));
+		}
+
 		navigate("/thankyou", { replace: true });
 		dispatch(setSideBar(sideBar.selected + 1));
 	}

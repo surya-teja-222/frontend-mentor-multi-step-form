@@ -45,7 +45,7 @@ function App(props: appProps) {
 				<div role="navigation" className="left hide_for_mobile">
 					<Menu />
 				</div>
-				<div className="right" role={"main"}>
+				<div className="right">
 					{props.error ? <Error /> : <Handler />}
 				</div>
 			</div>

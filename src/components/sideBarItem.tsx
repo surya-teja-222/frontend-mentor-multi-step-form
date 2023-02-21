@@ -21,6 +21,7 @@ function Item(props: sideBarItemProps) {
 			aria-pressed="false"
 			tabIndex={0}
 			key={props.id}
+			
 			onKeyDown={handleClick}
 			onClick={handleClick}
 			className="side_bar_item"

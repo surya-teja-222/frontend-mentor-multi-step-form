@@ -16,7 +16,7 @@ export default function AddonComponent(params: addonsState) {
 	var isSelected = selectedAddons.find((addon) => addon.id === params.id);
 
 	function handleDivClick(e: any) {
-		if (e.key && e.keyCode != 13 && e.keyCode != 32) {
+		if (e.key && e.keyCode != 32) {
 			return;
 		}
 		var d = document.querySelector(
@@ -49,8 +49,8 @@ export default function AddonComponent(params: addonsState) {
 					type="checkbox"
 					className="addon_checkbox"
 					name={params.name}
+					tabIndex={-1}
 					id={`addon${params.id}name`}
-					// onChange={handleChange}
 					defaultChecked={isSelected ? true : false}
 				/>
 				<div className="">
