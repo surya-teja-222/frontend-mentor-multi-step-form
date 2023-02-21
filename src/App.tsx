@@ -1,10 +1,4 @@
-import {
-	JSXElementConstructor,
-	ReactElement,
-	ReactFragment,
-	useEffect,
-	useState,
-} from "react";
+import { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import Item from "./components/sideBarItem";
@@ -44,8 +38,11 @@ function App(props: appProps) {
 
 	return (
 		<div className="App">
-			<div className="center">
-				<div className="left">
+			<div className="left hide_for_desktop">
+				<Menu />
+			</div>
+			<div className="center ">
+				<div className="left hide_for_mobile">
 					<Menu />
 				</div>
 				<div className="right">

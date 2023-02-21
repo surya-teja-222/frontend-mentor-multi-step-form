@@ -36,6 +36,11 @@ function PlanComponent(props: userPlanState) {
 					{"/"}
 					{props.monthOrYear == "monthly" ? "mo" : "yr"}
 				</p>
+				{props.monthOrYear == "yearly" ? (
+					<p className="plan_price_free">2 months free</p>
+				) : (
+					<></>
+				)}
 			</div>
 		</div>
 	);

@@ -3,7 +3,7 @@
 /* Globals */
 html {
 	/* Sizes */
-	--mobile-size: 23.43rem;
+	--mobile-size: 374px;
 	--desktop-size: 90rem;
 	/* Colors */
 	/* Primary Colors */
@@ -61,10 +61,13 @@ html {
 .App {
 	background-color: var(--neutral-magnolia);
 	min-height: 100dvh;
+	width: 100%;
+	min-width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	/* z-index: -10; */
 }
 
 /* Remove all default styles */
@@ -233,10 +236,12 @@ p {
 	color: var(--primary-strawberry-red);
 }
 
-.next_step {
-	width: fit-content;
+.next_step_parent {
 	margin-left: auto;
 	margin-top: auto;
+}
+.next_step {
+	width: fit-content;
 	padding: var(--padding-small) var(--padding-normal);
 	border-radius: 5px;
 	color: var(--neutral-white);
@@ -606,4 +611,98 @@ input:checked + .slider:before {
 	font-weight: var(--weight-regular);
 	color: var(--neutral-cool-gray);
 	text-align: center;
+}
+
+.plan_price_free {
+	font-family: var(--font-family-medium);
+	font-weight: var(--weight-medium);
+	font-size: 14px;
+	color: var(--primary-marine-blue);
+}
+
+@media screen and (min-width: 376px) {
+	.hide_for_desktop {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.App {
+		/* z-index: -2; */
+		position: relative;
+	}
+	.center {
+		z-index: 10;
+		width: 90%;
+		min-width: 90%;
+		aspect-ratio: 1;
+		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+	}
+	.left {
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(/public/assets/images/bg-sidebar-mobile.svg) no-repeat;
+		flex-direction: row;
+		width: 100%;
+		height: 10rem;
+		justify-content: center;
+		border-radius: 0px;
+		user-select: auto;
+	}
+	.right {
+		margin-left: 1rem;
+		margin-right: 1rem;
+		padding: 0;
+		background-color: var(--neutral-white);
+	}
+
+	.form__content {
+		width: 100%;
+		margin-top: var(--padding-normal);
+	}
+	.plan_component_parent {
+		flex-direction: column;
+		width: 100%;
+	}
+	.plan_button {
+		flex-direction: row;
+		height: fit-content;
+		width: 100%;
+		justify-content: start;
+	}
+	.hide_for_mobile {
+		display: none;
+	}
+
+	.bottom_nav_bar {
+		background-color: var(--neutral-white);
+		padding: var(--padding-normal);
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		/* z-index: 10; */
+		width: 100%;
+	}
+
+	.next_step_parent {
+		background-color: var(--neutral-white);
+		padding: var(--padding-normal);
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		width: 100%;
+		/* z-index: 10; */
+	}
+	.next_step {
+		float: right;
+		/* z-index: 10; */
+	}
+	.side_bar_item {
+		width: fit-content;
+		height: fit-content;
+	}
 }

@@ -78,7 +78,7 @@ function formContent2() {
 					</span>
 				</div>
 			</div>
-			<div className="bottom_nav_bar">
+			<div className="bottom_nav_bar ">
 				<button className="go_back" onClick={handlePrev}>
 					Go Back
 				</button>

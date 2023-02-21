@@ -108,9 +108,11 @@ function formContent1() {
 						placeholder="e.g. +1 234 567 890"
 					/>
 				</div>
-				<button className="next_step" type="submit">
-					Next Step
-				</button>
+				<div className="next_step_parent">
+					<button className="next_step" type="submit">
+						Next Step
+					</button>
+				</div>
 			</form>
 		</div>
 	);

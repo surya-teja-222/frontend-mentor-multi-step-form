@@ -33,7 +33,7 @@ function Item(props: sideBarItemProps) {
 			>
 				<span>{props.id}</span>
 			</div>
-			<div className="side_bar_item_right">
+			<div className="side_bar_item_right hide_for_mobile">
 				<span>step {props.id}</span>
 				<h2>{props.value}</h2>
 			</div>
