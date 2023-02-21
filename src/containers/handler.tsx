@@ -9,8 +9,6 @@ const FormContent4 = React.lazy(() => import("./formContent4"));
 const ThankYou = React.lazy(() => import("./thankYou"));
 function Handler() {
 	const sideBar = useSelector((state: any) => state.sideBar as SideBarState);
-	const dispatch = useDispatch();
-
 	switch (sideBar.selected) {
 		case 1:
 			return (

@@ -9,7 +9,6 @@ import store from "./state/store";
 import App from "./App";
 // Global CSS
 import "./util/css/style.css";
-import Error from "./error";
 
 const router = createBrowserRouter([
 	{

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { addons, addonsState } from "../util/global";
+import { addonsState } from "../util/global";
 
 const initialState: addonsState[] = [];
 

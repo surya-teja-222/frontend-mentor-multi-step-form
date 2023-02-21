@@ -1,13 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
-import { setSideBar, SideBarState } from "../state/sideBarReducer";
+import { useDispatch } from "react-redux";
+import { setSideBar } from "../state/sideBarReducer";
 import { sideBarItemProps } from "../util/global";
 import { useNavigate } from "react-router-dom";
 
 function Item(props: sideBarItemProps) {
-	const sideBar = useSelector((state: any) => state.sideBar as SideBarState);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const name = "menu_item";
 
 	function handleClick(e: any) {
 		if (e.type === "keydown" && e.key !== "Enter") {

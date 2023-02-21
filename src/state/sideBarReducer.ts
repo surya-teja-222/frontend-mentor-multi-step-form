@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { menuType, menu } from "../util/global";
+import { menu } from "../util/global";
 
 export interface SideBarState {
 	selected: number;
