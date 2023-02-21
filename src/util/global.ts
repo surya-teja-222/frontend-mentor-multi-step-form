@@ -79,12 +79,19 @@ export const menu: menuType = [
 		value: "Summary",
 		to: "/summary",
 	},
+	{
+		id: 5,
+		value: "Thank You",
+		to: "/thankyou",
+		isNotVisible: true,
+	},
 ];
 
 export type menuType = {
 	id: number;
 	value: string;
 	to: string;
+	isNotVisible?: true;
 }[];
 
 export type sideBarItemProps = {

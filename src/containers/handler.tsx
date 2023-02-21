@@ -6,7 +6,7 @@ const FormContent1 = React.lazy(() => import("./formContent1"));
 const FormContent2 = React.lazy(() => import("./formContent2"));
 const FormContent3 = React.lazy(() => import("./formContent3"));
 const FormContent4 = React.lazy(() => import("./formContent4"));
-
+const ThankYou = React.lazy(() => import("./thankYou"));
 function Handler() {
 	const sideBar = useSelector((state: any) => state.sideBar as SideBarState);
 	const dispatch = useDispatch();
@@ -34,6 +34,12 @@ function Handler() {
 			return (
 				<Suspense fallback={<h1>Loading...</h1>}>
 					<FormContent4 />
+				</Suspense>
+			);
+		case 5:
+			return (
+				<Suspense fallback={<h1>Loading...</h1>}>
+					<ThankYou />
 				</Suspense>
 			);
 		default:

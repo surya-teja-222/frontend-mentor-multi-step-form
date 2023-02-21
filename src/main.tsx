@@ -33,6 +33,11 @@ const router = createBrowserRouter([
 		errorElement: <App error={true} />,
 	},
 	{
+		path: "/thankyou",
+		element: <App id={5} />,
+		errorElement: <App error={true} />,
+	},
+	{
 		path: "*",
 		element: <App id={1} />,
 		errorElement: <App error={true} />,

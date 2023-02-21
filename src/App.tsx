@@ -25,16 +25,18 @@ function App(props: appProps) {
 		return (
 			<>
 				{menu.map((item, index) => {
-					var select = index === sideBar.selected - 1;
-					return (
-						<Item
-							key={index}
-							id={item.id}
-							selected={select}
-							value={item.value}
-							to={item.to}
-						/>
-					);
+					if (!item.isNotVisible) {
+						var select = index === sideBar.selected - 1;
+						return (
+							<Item
+								key={index}
+								id={item.id}
+								selected={select}
+								value={item.value}
+								to={item.to}
+							/>
+						);
+					}
 				})}
 			</>
 		);

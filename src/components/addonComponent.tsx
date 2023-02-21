@@ -16,6 +16,9 @@ export default function AddonComponent(params: addonsState) {
 	var isSelected = selectedAddons.find((addon) => addon.id === params.id);
 
 	function handleDivClick(e: any) {
+		if (e.key && e.keyCode != 13 && e.keyCode != 32) {
+			return;
+		}
 		var d = document.querySelector(
 			`#addon${params.id}name`
 		) as HTMLInputElement;
@@ -37,6 +40,7 @@ export default function AddonComponent(params: addonsState) {
 			aria-pressed="false"
 			tabIndex={2}
 			onClick={handleDivClick}
+			onKeyDown={handleDivClick}
 			data-selected={isSelected ? true : false}
 		>
 			<div className="addon_1">
