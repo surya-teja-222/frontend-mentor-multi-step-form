@@ -37,19 +37,19 @@ function App(props: appProps) {
 	}
 
 	return (
-		<div className="App">
-			<div className="left hide_for_desktop">
+		<main className="App">
+			<div role="navigation" className="left hide_for_desktop">
 				<Menu />
 			</div>
 			<div className="center ">
-				<div className="left hide_for_mobile">
+				<div role="navigation" className="left hide_for_mobile">
 					<Menu />
 				</div>
-				<div className="right">
+				<div className="right" role={"main"}>
 					{props.error ? <Error /> : <Handler />}
 				</div>
 			</div>
-		</div>
+		</main>
 	);
 }
 

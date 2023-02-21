@@ -19,7 +19,7 @@ function PlanComponent(props: userPlanState) {
 		<div
 			role="button"
 			aria-pressed="false"
-			tabIndex={2}
+			tabIndex={0}
 			className="plan_button"
 			onKeyDown={handleClick}
 			onClick={handleClick}

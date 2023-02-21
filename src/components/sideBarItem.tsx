@@ -19,7 +19,7 @@ function Item(props: sideBarItemProps) {
 			data-to={props.to}
 			role="button"
 			aria-pressed="false"
-			tabIndex={1}
+			tabIndex={0}
 			key={props.id}
 			onKeyDown={handleClick}
 			onClick={handleClick}

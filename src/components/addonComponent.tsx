@@ -38,7 +38,7 @@ export default function AddonComponent(params: addonsState) {
 			className="addon"
 			role="button"
 			aria-pressed="false"
-			tabIndex={2}
+			tabIndex={0}
 			onClick={handleDivClick}
 			onKeyDown={handleDivClick}
 			data-selected={isSelected ? true : false}
