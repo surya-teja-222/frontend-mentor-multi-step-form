@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { SideBarState } from "../state/sideBarReducer";
 
 const FormContent1 = React.lazy(() => import("./formContent1"));
